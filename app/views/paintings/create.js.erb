@@ -1,0 +1,5 @@
+<% if @painting.new_record? %>
+alert("Faided to upload painting: <%= j @painting.errors.full_messages.join(',') %>");
+<% else %>
+$("#paintings").append("<%= j render(@painting) %>");
+<% end %>

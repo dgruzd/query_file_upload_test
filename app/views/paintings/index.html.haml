@@ -1,6 +1,6 @@
 %h1 Painting Gallery
 
-.paintings
+#paintings
   = render @paintings
 .clear
 
@@ -8,5 +8,5 @@
 
 = form_for Painting.new do |f|
   = f.label :image, 'Upload paintings:'
-  = f.file_field :image, multiple: true, name: 'painting[image]'
+  = file_field_tag 'painting[image]', multiple: true
 
