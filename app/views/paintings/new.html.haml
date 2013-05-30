@@ -1,0 +1,6 @@
+= form_for Painting.new, :html => {:id => 'form'} do |f|
+  = f.text_field :name
+  = f.label :image, 'Upload paintings:'
+  = f.file_field :image
+  = f.submit
+

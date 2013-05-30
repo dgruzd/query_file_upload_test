@@ -17,5 +17,7 @@
 
 
 jQuery(function(){
-    $('#new_painting').fileupload();
+    $('#new_painting').fileupload(
+        {'dataType' : 'script'}
+    );
 });
