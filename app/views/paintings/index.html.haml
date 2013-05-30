@@ -1,0 +1,12 @@
+%h1 Painting Gallery
+
+.paintings
+  = render @paintings
+.clear
+
+
+
+= form_for Painting.new do |f|
+  = f.label :image, 'Upload paintings:'
+  = f.file_field :image
+
