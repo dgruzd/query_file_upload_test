@@ -12,12 +12,19 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require twitter/bootstrap
 //= require jquery-fileupload/basic
 //= require_tree .
 
 
 jQuery(function(){
     $('#new_painting').fileupload(
-        {'dataType' : 'script'}
+        {
+            'dataType' : 'script',
+            progress: function (e, data) {
+                var progress = parseInt(data.loaded / data.total * 100, 10);
+                $('.progress > .bar').css( 'width', progress + '%' );
+            }
+        }
     );
 });
