@@ -12,4 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-fileupload/basic
 //= require_tree .
+
+
+jQuery(function(){
+    $('#new_painting').fileupload();
+});

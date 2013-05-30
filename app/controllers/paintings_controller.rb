@@ -7,6 +7,7 @@ class PaintingsController < ApplicationController
   end
 
   def create
+    render :text => params.inspect
   end
 
   def show
